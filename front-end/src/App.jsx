@@ -7,14 +7,14 @@ function App() {
 
   return (
     <>
-     <GoogleLogin
-  onSuccess={credentialResponse => {
-    console.log(credentialResponse);
-  }}
-  onError={() => {
-    console.log('Login Failed');
-  }}
-/>;
+    <GoogleLogin
+        onSuccess={(credentialResponse) => {
+          console.log('Connexion réussie', credentialResponse);
+        }}
+        onError={() => {
+          console.log('Échec de la connexion');
+        }}
+      />
     </>
   )
 }
